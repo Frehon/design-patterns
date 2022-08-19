@@ -1,5 +1,6 @@
 import creational.abstractFactory.api.factory.FurnitureFactory;
 import runner.AbstractFactoryRunner;
+import runner.AdapterRunner;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +13,11 @@ public class Main {
                     AbstractFactoryRunner abstractFactoryRunner = new AbstractFactoryRunner();
                     abstractFactoryRunner.createEnvironment();
                     abstractFactoryRunner.run();
+                }
+                case "adapter" -> {
+                    System.out.println("Running adapter example...");
+                    AdapterRunner adapterRunner = new AdapterRunner();
+                    adapterRunner.run();
                 }
                 default -> throw new RuntimeException("No pattern with this name found");
             }
